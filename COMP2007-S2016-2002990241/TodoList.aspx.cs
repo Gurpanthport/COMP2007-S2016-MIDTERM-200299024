@@ -18,8 +18,10 @@ namespace COMP2007_S2016_2002990241
             {
                 //get the list data
                 this.GetList();
+                
             }
         }
+       
         protected void GetList()
         {
             using (TodoConnection db = new TodoConnection())

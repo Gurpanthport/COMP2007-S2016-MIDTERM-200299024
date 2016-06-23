@@ -10,9 +10,10 @@
 
             <asp:BoundField DataField="ToDoName" HeaderText="To Do Name" Visible="true" /> 
             <asp:BoundField DataField="ToDoNotes" HeaderText="To Do Notes" Visible="true" /> 
-           <asp:TemplateField HeaderText="Check Box" >
+          
+                <asp:TemplateField>
         <ItemTemplate>
-            <asp:CheckBox Datafield="Completed" runat="server" />
+            <asp:CheckBox ID="toDoCheck" runat="server" />
         </ItemTemplate>
         </asp:TemplateField>
          <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i>Edit" 
