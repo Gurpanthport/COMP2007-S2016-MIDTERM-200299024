@@ -6,6 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using COMP2007_S2016_2002990241.Models;
 using System.Web.ModelBinding;
+/**
+ * Project Name:  COMP2007_S2016_2002990241
+ * Name: Gurpanth Singh
+ * Student Number: 200299024
+ * */
 namespace COMP2007_S2016_2002990241
 {
     public partial class TodoList : System.Web.UI.Page
@@ -40,7 +45,7 @@ namespace COMP2007_S2016_2002990241
         protected void ToDoGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int selectedRow = e.RowIndex;
-            //get the select game id using the grids
+            //get the select list id using the grids
             int toDoID = Convert.ToInt32(ToDoGridView.DataKeys[selectedRow].Values["toDoID"]);
             //Removing  the data
             using (TodoConnection db = new TodoConnection())
@@ -49,7 +54,7 @@ namespace COMP2007_S2016_2002990241
                                     where todoRecords.TodoID == toDoID
                                     select todoRecords).FirstOrDefault();
 
-                //delete the selected game from the database
+                //delete the selected todolist from the database
                 db.Todos.Remove(deletedList);
 
                 db.SaveChanges();

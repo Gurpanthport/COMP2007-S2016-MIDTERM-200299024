@@ -13,7 +13,7 @@
           
                 <asp:TemplateField>
         <ItemTemplate>
-            <asp:CheckBox ID="toDoCheck" runat="server" />
+            <asp:CheckBox DataField="Completed" runat="server" />
         </ItemTemplate>
         </asp:TemplateField>
          <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i>Edit" 

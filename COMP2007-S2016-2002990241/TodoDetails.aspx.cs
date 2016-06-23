@@ -6,7 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using COMP2007_S2016_2002990241.Models;
 using System.Web.ModelBinding;
-
+/**
+ * Project Name:  COMP2007_S2016_2002990241
+ * Name: Gurpanth Singh
+ * Student Number: 200299024
+ * */
 namespace COMP2007_S2016_2002990241
 {
 	public partial class ToDoDetails : System.Web.UI.Page
@@ -58,7 +62,7 @@ namespace COMP2007_S2016_2002990241
                 if (Request.QueryString.Count > 0)
                 {
                     ToDoID = Convert.ToInt32(Request.QueryString["toDoID"]);
-                    //Get the current game form the EF
+                    //Get the current list form the EF
                     newList = (from todo in db.Todos
                                where todo.TodoID == ToDoID
                                select todo).FirstOrDefault();
@@ -80,7 +84,7 @@ namespace COMP2007_S2016_2002990241
 
 
 
-                //Use linq to add or insert
+                //Save the info in the db
                 if (ToDoID == 0)
                 {
                     db.Todos.Add(newList);
